@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "dev.eas.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"GameRendererMixin",
+		"EntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"mixins": [
+	]
+}
