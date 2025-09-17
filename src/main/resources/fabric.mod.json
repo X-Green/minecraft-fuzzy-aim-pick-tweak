@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"dev.eas.FuzzyAimPickTweakClient"
+		],
+		"modmenu": [
+			"dev.eas.compat.modmenu.ModMenuImpl"
 		]
 	},
 	"mixins": [

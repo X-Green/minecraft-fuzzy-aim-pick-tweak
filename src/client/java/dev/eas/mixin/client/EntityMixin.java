@@ -40,7 +40,8 @@ public abstract class EntityMixin implements IEntity {
         LOGGER.debug("EntityMixin pick called with yawOffsetDegree: {}, pitchOffsetDegree: {}", yawOffsetDegree, pitchOffsetDegree);
         Vec3 eyePosition = this.getEyePosition(timeFactor);
         Vec3 rotatedViewVector = this.calculateViewVector(
-                Math.clamp(this.getViewXRot(timeFactor) + pitchOffsetDegree, -90.0f, 90.0f),
+                this.getViewXRot(timeFactor) + pitchOffsetDegree,
+//                Math.clamp(this.getViewXRot(timeFactor) + pitchOffsetDegree, -90.0f, 90.0f),
                 (this.getViewYRot(timeFactor) + yawOffsetDegree) % 360.0f
         );
         Vec3 vec33 = eyePosition.add(rotatedViewVector.x * reach, rotatedViewVector.y * reach, rotatedViewVector.z * reach);
